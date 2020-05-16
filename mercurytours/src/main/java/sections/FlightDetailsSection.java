@@ -1,4 +1,10 @@
 package sections;
 
-public class FlightDetailsSection {
+import org.openqa.selenium.WebDriver;
+
+public class FlightDetailsSection extends BaseSection{
+
+    public FlightDetailsSection(WebDriver driver){
+        super(driver);
+    }
 }
