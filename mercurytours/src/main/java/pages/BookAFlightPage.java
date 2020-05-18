@@ -17,10 +17,12 @@ public class BookAFlightPage extends BasePage {
     }
 
     public SummarySection getSummarySection() {
-    	return this.summarySection;
+    	
+    	return this.summarySection;    	
     }
 
-    public PassengerSection getPassengerSection() {
+    //get PassengerSection
+    public PassengerSection getPassengerSection() {    	
     	return this.passengerSection;
     }
 
