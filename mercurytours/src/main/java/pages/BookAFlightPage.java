@@ -16,6 +16,7 @@ public class BookAFlightPage extends BasePage {
         this.passengerSection = new PassengerSection(this.driver);
     }
 
+    //get SummarySection
     public SummarySection getSummarySection() {
     	
     	return this.summarySection;    	
