@@ -2,7 +2,7 @@ package testCasesMercury;
 
 import org.testng.annotations.Test;
 
-public class homePageLeftMenuTestCases {
+public class HomePageLeftMenuTestCases {
 
     @Test(alwaysRun = true, priority = 0)
     public void validateUserLoggedRedirectedFlightFinderPage(){
