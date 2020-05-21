@@ -26,4 +26,8 @@ public class FlightFinderPage extends BasePage {
     public FlightDetailsSection getFlightDetailsSection() {
         return flightDetailsSection;
     }
+
+    public void clickOnContinue(){
+        
+    }
 }
