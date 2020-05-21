@@ -38,5 +38,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.yaml:snakeyaml:1.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.ant:ant:1.10.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.ant:ant-launcher:1.10.5" level="project" />
   </component>
 </module>
