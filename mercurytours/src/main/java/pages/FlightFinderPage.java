@@ -28,6 +28,6 @@ public class FlightFinderPage extends BasePage {
     }
 
     public void clickOnContinue(){
-        
+
     }
 }
