@@ -1,13 +1,15 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import sections.PassengerSection;
 
 public class BookAFlightPage extends BasePage {
 
 	//All Sections inside the Page
 	private SummarySection summarySection;
 
-	private PassengerSection passengerSection;
+
+    private PassengerSection passengerSection;
 
 	public BookAFlightPage(WebDriver driver) {
         super(driver,driver.getCurrentUrl());
