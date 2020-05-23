@@ -2,7 +2,7 @@ package testCasesMercury;
 
 import org.testng.annotations.Test;
 
-public class HomePageLeftMenuSignIn {
+public class HomePageLeftMenuSignIn extends BaseTest {
 
     @Test(alwaysRun = true, priority = 0)
     /*@Severity(SeverityLevel.BLOCKER)
