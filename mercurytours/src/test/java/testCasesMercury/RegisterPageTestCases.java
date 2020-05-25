@@ -2,7 +2,7 @@ package testCasesMercury;
 
 import org.testng.annotations.Test;
 
-public class homePageFlightsPageFlightDetailsTestCases {
+class homePageFlightsPageFlightDetailsTestCases {
 
     //@Description("TC01_Registration Page_User Registration Mandatory Fields")
     @Test(alwaysRun=true,priority=0)
@@ -30,7 +30,7 @@ public class homePageFlightsPageFlightDetailsTestCases {
 
     //@Description("TC05_Registration Page_Sign In Link")
     @Test(alwaysRun=true,priority=0)
-    public void verifySign-InLink(){
+    public void verifySignInLink(){
 
     }
 
