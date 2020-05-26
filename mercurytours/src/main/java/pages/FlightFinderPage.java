@@ -2,11 +2,14 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import sections.FlightDetailsSection;
+import sections.PreferencesSection;
+
+import java.util.prefs.Preferences;
 
 public class FlightFinderPage extends BasePage {
 
     // Sections inside the Flight Finder Page
-    private PreferenceSection preferenceSection;
+    private PreferencesSection preferenceSection;
 
     private FlightDetailsSection flightDetailsSection;
 
@@ -15,15 +18,19 @@ public class FlightFinderPage extends BasePage {
 
         // Insert Related sections
 
-        this.preferenceSection = new PreferenceSection(this.driver);
+        this.preferenceSection = new PreferencesSection(this.driver);
         this.flightDetailsSection = new FlightDetailsSection((this.driver));
     }
 
-    public PreferenceSection getPreferenceSection() {
+    public PreferencesSection getPreferenceSection() {
         return preferenceSection;
     }
 
     public FlightDetailsSection getFlightDetailsSection() {
         return flightDetailsSection;
+    }
+
+    public void clickOnContinue(){
+        
     }
 }
