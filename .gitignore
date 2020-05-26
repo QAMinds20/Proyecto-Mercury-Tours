@@ -1,1 +1,5 @@
 mercurytours/.idea*
+mercurytours/target
+mercurytours/*.iml
+
+
