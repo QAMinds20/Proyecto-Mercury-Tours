@@ -1,8 +1,9 @@
 package testCasesMercury;
 
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
-public class homePageFlightsPageFlightDetailsTestCases {
+public class RegisterPageTestCases {
 
     //@Description("TC01_Registration Page_User Registration Mandatory Fields")
     @Test(alwaysRun=true,priority=0)
@@ -10,7 +11,7 @@ public class homePageFlightsPageFlightDetailsTestCases {
 
     }
 
-    //@Description("TC02_Registration Page_User Mandadory Fields_Submit Formulary-No Information Provide")
+    @Description("TC02_Registration Page_User Mandadory Fields_Submit Formulary-No Information Provide")
     @Test(alwaysRun=true,priority=0)
     public void registeringLeavingAllFieldsBlank(){
 
@@ -30,7 +31,7 @@ public class homePageFlightsPageFlightDetailsTestCases {
 
     //@Description("TC05_Registration Page_Sign In Link")
     @Test(alwaysRun=true,priority=0)
-    public void verifySign-InLink(){
+    public void verifySignInLink(){
 
     }
 

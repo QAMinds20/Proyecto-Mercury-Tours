@@ -2,7 +2,7 @@ package testCasesMercury;
 
 import org.testng.annotations.Test;
 
-public class homePageSelectFlightTestCases {
+public class HomePageSelectFlightTest {
 
     @Test(alwaysRun=true, priority=0)
     public void validateOnlyOneOptionIsAllowedToSelectOnServiceClassSection(){
