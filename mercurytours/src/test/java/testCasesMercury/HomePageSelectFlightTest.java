@@ -2,7 +2,7 @@ package testCasesMercury;
 
 import org.testng.annotations.Test;
 
-public class homePageSelectFlightTestCases {
+public class HomePageSelectFlightTest extends BaseTest{
 
     @Test(alwaysRun=true, priority=0)
     public void validateOnlyOneOptionIsAllowedToSelectOnServiceClassSection(){
@@ -16,7 +16,7 @@ public class homePageSelectFlightTestCases {
     public void validatePreferencesDefaultOptions(){
 
     }
-    
+
     @Test(alwaysRun=true, priority=0)
     public void  validateSelectContinueButton(){
 
