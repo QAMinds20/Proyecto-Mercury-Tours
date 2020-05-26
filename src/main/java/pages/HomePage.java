@@ -7,6 +7,7 @@ public class HomePage extends BasePage {
 	private static final String MERCURY_TOURS_MAIN_PAGE = "http://newtours.demoaut.com/";
 
     public HomePage(WebDriver driver) {
+
         super(driver, driver.getCurrentUrl());
     }
 
