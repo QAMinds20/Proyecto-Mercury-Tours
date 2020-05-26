@@ -1,5 +1,7 @@
 package testCasesMercury;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
