@@ -20,17 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="071d845c-ded7-42d0-9ea6-bfbfedce6b74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../PROYECTO.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/RegisterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sections/BillingAddressSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sections/SpecialSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCasesMercury/RegisterPageTestCases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testCasesMercury/HomePageFlightDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FlightFinderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FlightFinderPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -76,6 +81,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="4094" y="191" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1590446027471">
+      <screen x="3286" y="-278" width="1920" height="1160" />
+    </state>
+    <state x="4094" y="191" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728/1366.-155.1920.1040/3286.-278.1920.1160@3286.-278.1920.1160" timestamp="1590446027471" />
     <state x="417" y="334" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590070455172">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
