@@ -9,7 +9,7 @@ import utils.WebDriverFactory;
 public class BaseTest {
 
 
-    private WebDriver myDriver;
+    protected WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
     public void setUp(){
@@ -17,18 +17,18 @@ public class BaseTest {
         String browser = "chrome";
 
         //Generate driver for selected browser
-        myDriver = WebDriverFactory.getDriver(browser);
+        driver = WebDriverFactory.getDriver(browser);
 
         //Setting up Page Load and Implicit wait values for the browser
-        myDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        myDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown(){
         //Closing driver
-        myDriver.close();
-        myDriver.quit();
+        driver.close();
+        driver.quit();
 
     }
 
