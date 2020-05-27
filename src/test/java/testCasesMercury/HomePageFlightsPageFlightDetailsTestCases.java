@@ -3,7 +3,7 @@ package testCasesMercury;
 import org.testng.annotations.Test;
 
 
-public class FlightsPageFlightDetailsTestCases extends BaseTest {
+public class HomePageFlightsPageFlightDetailsTestCases {
 
     //@Description("TC21_Home Page - Flights Page_Flight Details_Default fields")
     @Test(alwaysRun=true,priority=0)
