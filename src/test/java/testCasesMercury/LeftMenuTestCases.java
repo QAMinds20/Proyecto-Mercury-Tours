@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 //REQ03 Home Page - Left Menu
 
-public class HomePageLeftMenuTestCases {
+public class LeftMenuTestCases extends BaseTest{
 
     //Allure Description, please uncomment after add to the POM file
     @Description("TC12_Home Page - Left Menu_User is redirected to Flights Page")
