@@ -8,9 +8,6 @@ import sections.ContactInfoSection;
 import sections.MailingInformationSection;
 import sections.UserInfoSection;
 
-<<<<<<< HEAD
-public class RegisterPage{
-=======
 public class RegisterPage extends BasePage{
 
     private UserInfoSection userInfoSection;
@@ -21,7 +18,6 @@ public class RegisterPage extends BasePage{
 
     @FindBy(how = How.NAME, using = "register")
     private WebElement submitButton;
->>>>>>> dev
 
     public RegisterPage(WebDriver driver) {
         super(driver, driver.getCurrentUrl());
