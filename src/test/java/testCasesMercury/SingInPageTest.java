@@ -15,7 +15,7 @@ public class SingInPageTest extends BaseTest {
 	String expectedWelcomeMessage;
 	String registerPageUrl;
 	String homePageUrl;
-	String singOnPageUrl;
+	String signOnPageUrl;
 	String validCopyright;
 	
     @Test(alwaysRun = true, priority = 0)
@@ -83,8 +83,8 @@ public class SingInPageTest extends BaseTest {
     }
 
     @Test(alwaysRun = true, priority = 0)
-    //@Story("TC08_Validate_User_Cant_Login")
-    //@Description("Validate that a User can't log-in with invalid username and password")
+    @Story("TC08_Validate_User_Cant_Login")
+    @Description("Validate that a User can't log-in with invalid username and password")
     public void validateUserCantLogin(){
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
     	open(this.driver);
@@ -101,9 +101,9 @@ public class SingInPageTest extends BaseTest {
     	//Step 5 - Click on 'SUBMIT' button
     	sp.clickOnSubmit();
 
-    	//Validate that the User is still on the SingOnPage
-    	singOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), singOnPageUrl);
+    	//Validate that the User is still on the SignOnPage
+    	signOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
+    	softAssertion.assertEquals(this.driver.getCurrentUrl(), signOnPageUrl);
     	
     }
 
@@ -127,8 +127,8 @@ public class SingInPageTest extends BaseTest {
     	sp.clickOnSubmit();
 
     	//Validate that user remains in the SingOnPage
-    	singOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), singOnPageUrl);
+    	signOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
+    	softAssertion.assertEquals(this.driver.getCurrentUrl(), signOnPageUrl);
 
     	//Step 6 - Close the browser
     	
@@ -154,8 +154,8 @@ public class SingInPageTest extends BaseTest {
     	sp.clickOnSubmit();
 
     	//Validate that user remains in the SingOnPage
-    	singOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), singOnPageUrl);
+    	signOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
+    	softAssertion.assertEquals(this.driver.getCurrentUrl(), signOnPageUrl);
 
     	//Step 6 - Close the browser
     	
