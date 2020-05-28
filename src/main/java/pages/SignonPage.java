@@ -45,7 +45,9 @@ public class SignonPage extends BasePage {
     }
 
     public void enterUser(String user) {
+
         userName.sendKeys(user);
+
     }
 
     public void enterPassword(String pass) {
