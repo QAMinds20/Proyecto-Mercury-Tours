@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import sections.FlightDetailsSection;
 import sections.PreferencesSection;
 
-import java.util.prefs.Preferences;
-
 public class FlightFinderPage extends BasePage {
 
     // Sections inside the Flight Finder Page
