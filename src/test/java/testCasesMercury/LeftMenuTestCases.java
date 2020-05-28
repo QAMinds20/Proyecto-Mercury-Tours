@@ -1,6 +1,8 @@
 package testCasesMercury;
 
 import io.qameta.allure.Description;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import sections.LeftMenuSection;
@@ -46,6 +48,9 @@ public class LeftMenuTestCases extends BaseTest{
         pagesURL="http://newtours.demoaut.com/mercuryreservation.php";
         softAssertion.assertEquals(this.driver.getCurrentUrl(), pagesURL);
 
+        WebElement title = driver.findElement(By.xpath(".//td/img[contains(@src, '/images/masts/mast_flightfinder.gif')]"));
+        softAssertion.assertEquals(title.isDisplayed(),true);
+
 
 
     }
@@ -75,6 +80,10 @@ public class LeftMenuTestCases extends BaseTest{
         //Expected - User is redirected to Cruises Special page
         pagesURL= "http://newtours.demoaut.com/mercurycruise.php";
         softAssertion.assertEquals(this.driver.getCurrentUrl(), pagesURL);
+
+        WebElement title = driver.findElement(By.xpath(".//td/img[contains(@src, '/images/masts/cruise_special.gif')]"));
+
+        softAssertion.assertEquals(title.isDisplayed(),true);
 
     }
     //Allure Description, please uncomment after add to the POM file
@@ -119,5 +128,8 @@ public class LeftMenuTestCases extends BaseTest{
         //Expected - User is redirected to Cruises Special page
         pagesURL= "http://newtours.demoaut.com/mercurycruise.php";
         softAssertion.assertEquals(this.driver.getCurrentUrl(), pagesURL);
+        WebElement title = driver.findElement(By.xpath(".//td/img[contains(@src, '/images/masts/cruise_special.gif')]"));
+
+        softAssertion.assertEquals(title.isDisplayed(),true);
     }
 }
