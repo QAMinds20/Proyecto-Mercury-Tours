@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 
 public class TopMenuSection extends BaseSection{
 
-    private WebElement singOnLink;
-    private WebElement singOffLink;
+    private WebElement signOnLink;
+    //private WebElement singOffLink;
     private WebElement registerLink;
     private WebElement supportLink;
     private WebElement contactLink;
@@ -20,22 +20,25 @@ public class TopMenuSection extends BaseSection{
     }
 
     public void clickOnSignOn() {
+        signOnLink.click();
 
     }
 
-    public void clickOnSignOff() {
+    //do we have Sign off link?
+    //public void clickOnSignOff() {
 
-    }
+    //}
 
     public void clickOnRegister() {
+        registerLink.click();
 
     }
 
     public void clickOnSupport() {
-
+        supportLink.click();
     }
 
     public void clickOnContact() {
-
+        contactLink.click();
     }
 }
