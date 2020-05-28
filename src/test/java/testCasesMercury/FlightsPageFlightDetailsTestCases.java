@@ -42,7 +42,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
         softAssertion.assertTrue(flightDetailsSection.getMonthReturn().isDisplayed(),"'Returning' month dropdown is not available");
 
         //Validate 'Returning' dropdown for day is present
-        softAssertion.assertTrue(flightDetailsSection.getDayReturn(.isDisplayed(),"'Returning' day dropdown is not available");
+        softAssertion.assertTrue(flightDetailsSection.getDayReturn().isDisplayed(),"'Returning' day dropdown is not available");
     }
 
     @Description("TC22_Home Page - Flights Page_Flight Details_Radio button")
