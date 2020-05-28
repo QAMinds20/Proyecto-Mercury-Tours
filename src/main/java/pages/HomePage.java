@@ -9,24 +9,32 @@ import sections.SpecialSection;
 
 public class HomePage extends BasePage {
 
-    //Information already added before my latest changes
-    @FindBy(how = How.XPATH, using = "(//font[contains(@face, 'Arial') and (@size=2)]")
-    private WebElement flightMessage;
 
-    //Information already added before my latest changes
-    public String getFlightMessage() {
-        return flightMessage.getText();
-    }
+    private SpecialSection specialSection = new SpecialSection(driver);
 
     public HomePage(WebDriver driver) {
-
         super(driver, driver.getCurrentUrl());
     }
 
+<<<<<<< HEAD
     public void viewSpecialsDestinations(SpecialSection a) {//fer: agrege el nombre de la variable "a" para que no marcara error
+=======
+>>>>>>> dev
 
-    }
+ // This methods are already implemented in Special Section class
+//    public void viewSpecialsDestinations(specialSection) {
+//
+//    }
+//
+//    public void viewSpecialsPrices(SpecialSection) {
+//
+//    }
+//
+//    public void countSpecialDestinationItems(SpecialSection) {
+//
+//    }
 
+<<<<<<< HEAD
     public void viewSpecialsPrices(SpecialSection b) {//fer: agrege el nombre de la variable "b" para que no marcara error
 
     }
@@ -58,4 +66,7 @@ public class HomePage extends BasePage {
     public void goToContact() {
 
     }
+=======
+
+>>>>>>> dev
 }
