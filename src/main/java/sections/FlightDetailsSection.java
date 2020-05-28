@@ -5,21 +5,21 @@ import org.openqa.selenium.WebElement;
 
 public class FlightDetailsSection extends BaseSection{
 
-    private WebElement tripType;
+    protected WebElement tripType;
 
-    private WebElement passengersCount;
+    protected WebElement passengersCount;
 
-    private WebElement departingFrom;
+    protected WebElement departingFrom;
 
-    private WebElement monthOn;
+    protected WebElement monthOn;
 
-    private WebElement dayOn;
+    protected WebElement dayOn;
 
-    private WebElement arrivingIn;
+    protected WebElement arrivingIn;
 
-    private WebElement monthReturn;
+    protected WebElement monthReturn;
 
-    private WebElement dayReturn;
+    protected WebElement dayReturn;
 
     public FlightDetailsSection(WebDriver driver){
         super(driver);
