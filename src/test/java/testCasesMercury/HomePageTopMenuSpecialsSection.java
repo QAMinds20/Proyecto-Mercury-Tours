@@ -2,7 +2,7 @@ package testCasesMercury;
 
 import org.testng.annotations.Test;
 
-public class SpecialsSection extends BaseTest {
+public class HomePageTopMenuSpecialsSection extends BaseTest {
 
 
     @Test(alwaysRun = true, priority = 0)
