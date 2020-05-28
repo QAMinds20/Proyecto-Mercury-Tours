@@ -82,7 +82,6 @@ public class LeftMenuTestCases extends BaseTest{
         softAssertion.assertEquals(this.driver.getCurrentUrl(), pagesURL);
 
         WebElement title = driver.findElement(By.xpath(".//td/img[contains(@src, '/images/masts/cruise_special.gif')]"));
-
         softAssertion.assertEquals(title.isDisplayed(),true);
 
     }
@@ -105,13 +104,23 @@ public class LeftMenuTestCases extends BaseTest{
         //Step 5  - Click on "SUBMIT" button
         sp.clickOnSubmit();
 
-        //Step 6 - Click on Cruises link placed in the left ide of the page, under Car Rentals link
+        //Step 6 - Click right click on Cruises link placed in the left ide of the page, under Car Rentals link. Open the page in other tab
         lms.clickOnCruises();
-
 
         //Expected - User is redirected to Cruises Special page
         pagesURL= "http://newtours.demoaut.com/mercurycruise.php";
         softAssertion.assertEquals(this.driver.getCurrentUrl(), pagesURL);
+
+        //Step 7 - Click right click on Flights link placed in the left ide of the page, under Car Rentals link. Open the page in other tab
+        lms.clickOnFlights();
+        
+        //Expected - User is redirected to Cruises Special page
+        pagesURL= "http://newtours.demoaut.com/mercurycruise.php";
+        softAssertion.assertEquals(this.driver.getCurrentUrl(), pagesURL);
+
+        WebElement title = driver.findElement(By.xpath(".//td/img[contains(@src, '/images/masts/cruise_special.gif')]"));
+        softAssertion.assertEquals(title.isDisplayed(),true);
+
     }
     //Allure Description, please uncomment after add to the POM file
     @Description("TC15_Home Page - Left Menu_Prospect is redirected to Cruises Page")
