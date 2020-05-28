@@ -23,15 +23,15 @@ public class HomePage extends BasePage {
         super(driver, driver.getCurrentUrl());
     }
 
-    public void viewSpecialsDestinations(SpecialSection) {
+    public void viewSpecialsDestinations(SpecialSection a) {//fer: agrege el nombre de la variable "a" para que no marcara error
 
     }
 
-    public void viewSpecialsPrices(SpecialSection) {
+    public void viewSpecialsPrices(SpecialSection b) {//fer: agrege el nombre de la variable "b" para que no marcara error
 
     }
 
-    public void countSpecialDestinationItems(SpecialSection) {
+    public void countSpecialDestinationItems(SpecialSection c) {//fer: agrege el nombre de la variable "c" para que no marcara error
 
     }
 
