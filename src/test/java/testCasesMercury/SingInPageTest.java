@@ -1,5 +1,6 @@
 package testCasesMercury;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import io.qameta.allure.*;
@@ -17,8 +18,12 @@ public class SingInPageTest extends BaseTest {
 	String homePageUrl;
 	String signOnPageUrl;
 	String validCopyright;
-	
-    @Test(alwaysRun = true, priority = 0)
+
+	public SingInPageTest(WebDriver driver) {
+		super(driver);
+	}
+
+	@Test(alwaysRun = true, priority = 0)
     @Story("TC06_SingIn_Validate_WelcomeMessage")
     @Description("Validate the 'Welcome Message' from sing-on Page")
     public void validateWelcomeMessage(){

@@ -44,6 +44,4 @@ public class SpecialSection extends BaseSection{
         return specialPrices;
     }
 
-
-
 }

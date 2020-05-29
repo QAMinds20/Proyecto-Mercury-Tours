@@ -9,15 +9,19 @@ import sections.SpecialSection;
 
 public class HomePage extends BasePage {
 
-
-    private SpecialSection specialSection = new SpecialSection(driver);
+    private static final String MERCURY_TOURS_MAIN_PAGE = "http://newtours.demoaut.com/";
 
     public HomePage(WebDriver driver) {
         super(driver, driver.getCurrentUrl());
     }
 
+    public static void open(WebDriver driver) {
+        driver.get(MERCURY_TOURS_MAIN_PAGE);
+    }
 
- // This methods are already implemented in Special Section class
+    WebElement viewSpecialsDestinations;
+
+        // This methods are already implemented in Special Section class
 //    public void viewSpecialsDestinations(specialSection) {
 //
 //    }
@@ -30,5 +34,20 @@ public class HomePage extends BasePage {
 //
 //    }
 
+        WebElement viewSpecialsPrices;
 
+
+        WebElement countSpecialDestinationItems;
+
+        WebElement goToFlights;
+
+        WebElement goToCruises;
+
+        WebElement goToSignOn;
+
+        WebElement goToRegister;
+
+        WebElement goToSupport;
+
+        WebElement goToContact;
 }

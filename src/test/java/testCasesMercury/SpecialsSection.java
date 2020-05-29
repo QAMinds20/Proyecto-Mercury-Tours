@@ -1,9 +1,14 @@
 package testCasesMercury;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class SpecialsSection extends BaseTest {
 
+
+    public SpecialsSection(WebDriver driver) {
+        super(driver);
+    }
 
     @Test(alwaysRun = true, priority = 0)
     /*@Severity(SeverityLevel.BLOCKER)
