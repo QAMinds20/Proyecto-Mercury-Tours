@@ -5,11 +5,12 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import sections.FlightDetailsSection;
+import sections.LeftMenuSection;
 
 
 public class FlightsPageFlightDetailsTestCases extends BaseTest {
 
-    HomePage homePage = new HomePage(driver);
+    LeftMenuSection leftMenuSection = new LeftMenuSection(driver);
     FlightDetailsSection flightDetailsSection = new FlightDetailsSection(driver);
     SoftAssert softAssertion = new SoftAssert();
 
@@ -18,7 +19,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void verifyDefaultFields(){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Validate 'Type' radio button is present
         softAssertion.assertTrue(flightDetailsSection.getTripType().isEnabled(),"'Type' button is not available");
@@ -50,7 +51,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void validateRadioButtonTrip(){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Select the radio button
         flightDetailsSection.clickOnType();
@@ -61,7 +62,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void  validatePassengerDropdown(){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Select 'Passengers' dropdown and verify displayed option is '1'
         softAssertion.assertTrue(flightDetailsSection.getFirstPassengerSelectedOption().equals("1"), "1 is not the default selection");
@@ -75,7 +76,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void  validateDepartingDropdown(){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Select 'Departing From' dropdown and verify displayed option is 'Acapulco'
         softAssertion.assertTrue(flightDetailsSection.getdepartingFromSelectedOption().equals("Acapulco"),"Acapulco is not the default selection");
@@ -86,7 +87,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void  validateOnMonthDay(){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Select 'On' dropdown for month and verify displayed option is 'May'
         softAssertion.assertTrue(flightDetailsSection.getmonthOnSelectedOption().equals("May"),"May is not the default selection");
@@ -101,7 +102,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void  validateArrivingDropdown(){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Select 'Arriving In' dropdown and verify displayed option is 'Frankfurt'
         softAssertion.assertTrue(flightDetailsSection.getarrivingInSelectedOption().equals("Frankfurt"),"Frankfurt is not the default selection");
@@ -112,7 +113,7 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     public void returningDropdown (){
 
         //Navigate to Flights page
-        homePage.goToFlights();
+        leftMenuSection.clickOnFlights();
 
         //Select 'On' dropdown for month and verify displayed option is 'May'
         softAssertion.assertTrue(flightDetailsSection.getmonthReturnSelectedOption().equals("May"),"May is not the default selection");
