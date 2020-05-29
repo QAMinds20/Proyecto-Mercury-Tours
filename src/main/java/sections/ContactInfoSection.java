@@ -2,40 +2,28 @@ package sections;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 public class ContactInfoSection extends BaseSection {
 
-    @FindBy(how = How.XPATH, using = "//form//tbody//tr[1]//td//b//font/font")
+    //Add @FindBy(how = How.XPATH, using = "") for each element
+
     private WebElement contactInfoHeader;
 
-    @FindBy(how = How.XPATH, using = "//form//tr[2]//td//font/b")
     private WebElement firstNameLbl;
 
-    @FindBy(how = How.XPATH, using = "//form//tr[3]//td//font/b")
     private WebElement lastNameLbl;
 
-    @FindBy(how = How.XPATH, using = "//form//tr[4]//td//font/b")
     private WebElement phoneLbl;
 
-    @FindBy(how = How.XPATH, using = "//form//tr[5]//td//font/b")
     private WebElement emailLbl;
 
-    @FindBy(how = How.XPATH, using = "//input[@name=\"firstName\"]")
     private WebElement firstNameTxt;
 
-    @FindBy(how = How.XPATH, using = "//input[@name=\"lastName\"]")
     private WebElement lastNameTxt;
 
-    @FindBy(how = How.XPATH, using = "//input[@name=\"phone\"]")
     private WebElement phoneTxt;
 
-    @FindBy(how = How.XPATH, using = "//input[@name=\"userName\"]")
     private WebElement emailTxt;
-
-
-
 
     public ContactInfoSection(WebDriver driver) {
         super(driver);
@@ -77,4 +65,3 @@ public class ContactInfoSection extends BaseSection {
         return this.contactInfoHeader.getText();
     }
 }
-
