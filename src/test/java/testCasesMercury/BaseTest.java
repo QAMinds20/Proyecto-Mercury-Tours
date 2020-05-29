@@ -12,6 +12,10 @@ public class BaseTest {
 
     private static final String MERCURY_TOURS_MAIN_PAGE = "http://newtours.demoaut.com/";
 
+    public BaseTest(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public static void open(WebDriver driver) {
         driver.get(MERCURY_TOURS_MAIN_PAGE);
     }
