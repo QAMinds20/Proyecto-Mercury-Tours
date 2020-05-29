@@ -2,30 +2,22 @@ package sections;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 public class UserInfoSection extends BaseSection {
 
+	//Add @FindBy(how = How.XPATH, using = "") for each element
 
-	@FindBy(how = How.XPATH, using = "//form//tbody//tr[14]//td//font/b")
 	private WebElement userNameLbl;
 
-	@FindBy(how = How.XPATH, using = "//form//tbody//tr[15]//td//font/b")
 	private WebElement passwordLbl;
 
-	@FindBy(how = How.XPATH, using = "//form//tbody//tr[16]//td//font/b")
 	private WebElement confirmPasswordLbl;
 
-	@FindBy(how = How.XPATH, using = "//form//tbody//tr[16]//td[2]/input")
 	private WebElement userNameTxt;
 
-	@FindBy(how = How.XPATH, using = "//form//tbody//tr[16]//td[2]/input")
 	private WebElement passwordTxt;
 
-	@FindBy(how = How.XPATH, using = "//form//tbody//tr[16]//td[2]/input")
 	private WebElement confirmPasswordTxt;
-
 
 	public UserInfoSection(WebDriver driver) {
 		super(driver);
