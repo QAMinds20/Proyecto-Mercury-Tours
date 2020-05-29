@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 
 public class UserInfoSection extends BaseSection {
 
+
 	@FindBy(how = How.XPATH, using = "//form//tbody//tr[14]//td//font/b")
 	private WebElement userNameLbl;
 

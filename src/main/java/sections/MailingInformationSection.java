@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MailingInformationSection extends BaseSection {
 
+
     @FindBy(how = How.XPATH, using = "//form//tbody//tr[6]//td//b//font/font")
     private WebElement mailingInfoHeader;
 
@@ -43,6 +44,7 @@ public class MailingInformationSection extends BaseSection {
 
     @FindBy(how = How.XPATH, using = "//form//tbody//tr[12]//select")
     private WebElement conntrySelect;
+
 
 
     public MailingInformationSection(WebDriver driver) {
