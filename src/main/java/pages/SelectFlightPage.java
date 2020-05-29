@@ -30,8 +30,4 @@ public class SelectFlightPage {
                 System.out.println("Bad type");
         }
     }
-
-    public void getURL(WebDriver driver){
-        driver.getCurrentUrl();
-    }
 }

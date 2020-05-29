@@ -32,7 +32,7 @@ public class FlightFinderPage extends BasePage {
         return flightDetailsSection;
     }
 
-    private void clickOnContinue(){
-        
+    public void clickOnContinue(){
+
     }
 }
