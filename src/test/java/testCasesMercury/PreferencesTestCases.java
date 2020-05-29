@@ -3,19 +3,27 @@ package testCasesMercury;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
-import pages.HomePage;
 import pages.SignonPage;
+import sections.PreferencesSection;
 
 import java.util.List;
 
 public class PreferencesTestCases extends BaseTest {
 
-    HomePage homePage = new HomePage(driver);
+    SignonPage sp = new SignonPage(driver);
+
+    PreferencesSection preferencesSection = new PreferencesSection(driver);
+
+
+    public PreferencesTestCases(WebDriver driver) {
+        super(driver);
+    }
 
     @Test(alwaysRun = true, priority = 0)
     @Story("TC27_Home Page - Preferences_Only one option is allowed to select on Service Class section")
@@ -25,6 +33,11 @@ public class PreferencesTestCases extends BaseTest {
         //WebElement radio_economy = driver.findElement(By.xpath("//input[@value='Coach']"));
         //WebElement radio_business = driver.findElement(By.xpath("//input[@value='Business']"));
         //WebElement radio_first = driver.findElement(By.xpath("//input[@value='First']"));
+        open(driver);
+        sp.clickOnSingOn();
+        sp.enterUser("admin");
+        sp.enterPassword("admin");
+        sp.clickOnSubmit();
 
         //Recorrer la lista de los radio button de preferences
         List<WebElement> radio_serviceClass = driver.findElements(By.name("servClass"));
@@ -115,7 +128,7 @@ public class PreferencesTestCases extends BaseTest {
                 +"travel ";
 
         //Assert para verificar que el mensaje que esperamos sea el correcto
-        Assert.assertEquals(homePage.getFlightMessage(), expectedSelectFlightPAge);
+        Assert.assertEquals(preferencesSection.getFlightMessageMethod(), expectedSelectFlightPAge);
 
     }
 }

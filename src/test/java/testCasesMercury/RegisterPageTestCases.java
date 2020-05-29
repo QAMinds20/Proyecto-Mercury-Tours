@@ -1,6 +1,7 @@
 package testCasesMercury;
 
 import io.qameta.allure.Description;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.RegisterPage;
@@ -19,6 +20,10 @@ public class RegisterPageTestCases extends BaseTest{
 
     public static String REGISTER_PAGE_URL = "http://newtours.demoaut.com/mercuryregister.php";
     public static String LOGIN_PAGE_URL = "http://newtours.demoaut.com/mercurysignon.php";
+
+    public RegisterPageTestCases(WebDriver driver) {
+        super(driver);
+    }
 
     @Description("TC01_Registration Page_User Registration Mandatory Fields")
     @Test(alwaysRun=true,priority=0)
