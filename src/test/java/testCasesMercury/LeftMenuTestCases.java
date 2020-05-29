@@ -2,6 +2,7 @@ package testCasesMercury;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -18,6 +19,10 @@ public class LeftMenuTestCases extends BaseTest{
     SoftAssert softAssertion = new SoftAssert();
 
     String pagesURL;
+
+    public LeftMenuTestCases(WebDriver driver) {
+        super(driver);
+    }
 
     //Allure Description, please uncomment after add to the POM file
     @Description("TC12_Home Page - Left Menu_User is redirected to Flights Page")

@@ -33,12 +33,11 @@ public class PreferencesTestCases extends BaseTest {
         //WebElement radio_economy = driver.findElement(By.xpath("//input[@value='Coach']"));
         //WebElement radio_business = driver.findElement(By.xpath("//input[@value='Business']"));
         //WebElement radio_first = driver.findElement(By.xpath("//input[@value='First']"));
-
+        open(driver);
         sp.clickOnSingOn();
         sp.enterUser("admin");
         sp.enterPassword("admin");
         sp.clickOnSubmit();
-
 
         //Recorrer la lista de los radio button de preferences
         List<WebElement> radio_serviceClass = driver.findElements(By.name("servClass"));
