@@ -1,6 +1,7 @@
 package testCasesMercury;
 
 import io.qameta.allure.Description;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.HomePage;
@@ -13,6 +14,10 @@ public class FlightsPageFlightDetailsTestCases extends BaseTest {
     LeftMenuSection leftMenuSection = new LeftMenuSection(driver);
     FlightDetailsSection flightDetailsSection = new FlightDetailsSection(driver);
     SoftAssert softAssertion = new SoftAssert();
+
+    public FlightsPageFlightDetailsTestCases(WebDriver driver) {
+        super(driver);
+    } 
 
     @Description("TC21_Home Page - Flights Page_Flight Details_Default fields")
     @Test(alwaysRun=true,priority=0)
