@@ -19,15 +19,65 @@ public class SelectFlightPage {
     public void selectAFlightByTime(String flightType, String time) {
         switch(flightType.toUpperCase()) {
             case "DEPART":
-                DoubleRowElement departRow = this.departTableElement.getRowByTime(time);
-                departRow.getCellByColumnFromFirstRow("SELECT").getCellValue().click();
+                DoubleRowElement departRow = this.departTableElement.getRowByValueInColumn("DEPART",time);
+                departRow.getCellByColumn("SELECT").getCellValue().click();
                 break;
             case "RETURN":
-                DoubleRowElement returnRow = this.returnTableElement.getRowByTime(time);
-                returnRow.getCellByColumnFromFirstRow("SELECT").getCellValue().click();
+                DoubleRowElement returnRow = this.returnTableElement.getRowByValueInColumn("DEPART",time);
+                returnRow.getCellByColumn("SELECT").getCellValue().click();
                 break;
             default:
                 System.out.println("Bad type");
         }
     }
+
+    public void selectAFlightByPrice(String flightType, String price) {
+        switch(flightType.toUpperCase()) {
+            case "DEPART":
+                DoubleRowElement departRow = this.departTableElement.getRowByValueInColumn("PRICE",price);
+                departRow.getCellByColumn("SELECT").getCellValue().click();
+                break;
+            case "RETURN":
+                DoubleRowElement returnRow = this.returnTableElement.getRowByValueInColumn("PRICE",price);
+                returnRow.getCellByColumn("SELECT").getCellValue().click();
+                break;
+            default:
+                System.out.println("Bad type");
+        }
+    }
+
+    public void selectAFlightByAirline(String flightType, String airline) {
+        switch(flightType.toUpperCase()) {
+            case "DEPART":
+                DoubleRowElement departRow = this.departTableElement.getRowByValueInColumn("FLIGHT",airline);
+                departRow.getCellByColumn("SELECT").getCellValue().click();
+                break;
+            case "RETURN":
+                DoubleRowElement returnRow = this.returnTableElement.getRowByValueInColumn("FLIGHT",airline);
+                returnRow.getCellByColumn("SELECT").getCellValue().click();
+                break;
+            default:
+                System.out.println("Bad type");
+        }
+    }
+
+    public void selectAFlightByStops(String flightType, String stops) {
+        switch(flightType.toUpperCase()) {
+            case "DEPART":
+                DoubleRowElement departRow = this.departTableElement.getRowByValueInColumn("STOPS",stops);
+                departRow.getCellByColumn("SELECT").getCellValue().click();
+                break;
+            case "RETURN":
+                DoubleRowElement returnRow = this.returnTableElement.getRowByValueInColumn("STOPS",stops);
+                returnRow.getCellByColumn("SELECT").getCellValue().click();
+                break;
+            default:
+                System.out.println("Bad type");
+        }
+    }
+
+    public void clickOnContinue(WebDriver driver){
+        driver.findElement(By.xpath("//input[@name='reserveFlights']")).click();
+    }
+
 }
