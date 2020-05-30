@@ -9,7 +9,7 @@ import utils.WebDriverFactory;
 public class BaseTest {
 
 
-    private WebDriver myDriver;
+    protected WebDriver myDriver;
 
     @BeforeClass(alwaysRun = true)
     public void setUp(){

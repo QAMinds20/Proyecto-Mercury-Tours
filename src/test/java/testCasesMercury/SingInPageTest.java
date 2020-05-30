@@ -8,7 +8,7 @@ import pages.HomePage;
 
 public class SingInPageTest extends BaseTest {
 
-	SignonPage sp = new SignonPage(driver);
+	SignonPage sp = new SignonPage(myDriver);
 
 	SoftAssert softAssertion = new SoftAssert();
 
@@ -23,11 +23,11 @@ public class SingInPageTest extends BaseTest {
     @Description("Validate the 'Welcome Message' from sing-on Page")
     public void validateWelcomeMessage(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(driver);
+    	HomePage.open(myDriver);
 
     	//Step 2 - Click on 'SING-ON' Link
     	sp.clickOnSingOn();
@@ -49,11 +49,11 @@ public class SingInPageTest extends BaseTest {
     @Description("Validate that clicking on 'registration form' The user should be redirected to the 'Registration Page'")
     public void validateRegistrationFormLink(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(this.driver);
+    	HomePage.open(this.myDriver);
 
     	//Step 2 - Click on 'SING-ON' Link
     	sp.clickOnSingOn();
@@ -64,7 +64,7 @@ public class SingInPageTest extends BaseTest {
 
     	//Validate current URL is Register Page
     	registerPageUrl = "http://newtours.demoaut.com/mercuryregister.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), registerPageUrl);
+    	softAssertion.assertEquals(this.myDriver.getCurrentUrl(), registerPageUrl);
 
     	//Step 4 - Close the browser
     	tearDown();
@@ -76,11 +76,11 @@ public class SingInPageTest extends BaseTest {
     @Description("Validate the log-in functionality")
     public void validateLoginFunctionality(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(this.driver);
+    	HomePage.open(this.myDriver);
 
     	//Step 2 - Click on 'SING-ON' Link
     	sp.clickOnSingOn();
@@ -96,7 +96,7 @@ public class SingInPageTest extends BaseTest {
 
     	//Validate that user is redirected to the Main Page
     	homePageUrl = "http://newtours.demoaut.com/mercurywelcome.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), homePageUrl);
+    	softAssertion.assertEquals(this.myDriver.getCurrentUrl(), homePageUrl);
 
     	//Step 6 - Close the browser
     	tearDown();
@@ -108,11 +108,11 @@ public class SingInPageTest extends BaseTest {
     //@Description("Validate that a User can't log-in with invalid username and password")
     public void validateUserCantLogin(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(this.driver);
+    	HomePage.open(this.myDriver);
 
 
     	//Step 2 - Click on 'SING-ON' Link
@@ -129,7 +129,7 @@ public class SingInPageTest extends BaseTest {
 
     	//Validate that the User is still on the SingOnPage
     	singOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), singOnPageUrl);
+    	softAssertion.assertEquals(this.myDriver.getCurrentUrl(), singOnPageUrl);
 
     	//Step 6 - Close the browser
     	tearDown();
@@ -141,11 +141,11 @@ public class SingInPageTest extends BaseTest {
     @Description("Validate that a user can't login if the mandatory field 'User Name' is empty")
     public void validateUserNameFieldIsMandatory(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(this.driver);
+    	HomePage.open(this.myDriver);
 
 
     	//Step 2 - Click on 'SING-ON' Link
@@ -162,7 +162,7 @@ public class SingInPageTest extends BaseTest {
 
     	//Validate that user remains in the SingOnPage
     	singOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), singOnPageUrl);
+    	softAssertion.assertEquals(this.myDriver.getCurrentUrl(), singOnPageUrl);
 
     	//Step 6 - Close the browser
     	tearDown();
@@ -174,11 +174,11 @@ public class SingInPageTest extends BaseTest {
     @Description("Validate that a user can't login if the mandatory field 'Password' is empty")
     public void validatePasswordFieldIsMandatory(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(this.driver);
+    	HomePage.open(this.myDriver);
 
 
     	//Step 2 - Click on 'SING-ON' Link
@@ -195,7 +195,7 @@ public class SingInPageTest extends BaseTest {
 
     	//Validate that user remains in the SingOnPage
     	singOnPageUrl = "http://newtours.demoaut.com/mercurysignon.php";
-    	softAssertion.assertEquals(this.driver.getCurrentUrl(), singOnPageUrl);
+    	softAssertion.assertEquals(this.myDriver.getCurrentUrl(), singOnPageUrl);
 
     	//Step 6 - Close the browser
     	tearDown();
@@ -207,11 +207,11 @@ public class SingInPageTest extends BaseTest {
     @Description("Validate that the copyright message is '© 2020, Mercury Interactive'")
     public void validateCopyrightMessage(){
 
-    	// setup Driver properties
+    	// setup myDriver properties
     	setUp();
 
     	//Step 1 - go to Go to 'http://newtours.demoaut.com/'
-    	HomePage.open(this.driver);
+    	HomePage.open(this.myDriver);
 
 
     	//Step 2 - Click on 'SING-ON' Link
