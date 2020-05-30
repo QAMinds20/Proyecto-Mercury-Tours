@@ -101,4 +101,8 @@ public class TableElement extends BaseElement {
 
         return flightInfo;
     }
+
+    public void selectedRows (){
+        List<WebElement> selectedValues = this.rootElement.findElements(By.xpath(".//td[@class='title']"));
+    }
 }

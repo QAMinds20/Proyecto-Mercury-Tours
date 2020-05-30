@@ -80,4 +80,9 @@ public class SelectFlightPage {
         driver.findElement(By.xpath("//input[@name='reserveFlights']")).click();
     }
 
+    public boolean continueButtonIsAvailableAndEnable(WebDriver driver){
+        driver.findElement(By.xpath("//input[@name='reserveFlights']")).isDisplayed();
+        driver.findElement(By.xpath("//input[@name='reserveFlights']")).isEnabled();
+        return true;
+    }
 }

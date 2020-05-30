@@ -34,8 +34,6 @@ public class DoubleRowElement extends BaseElement {
         this.row = new HashMap<String, CellElement>();
 
         List<WebElement> firstCellElements = this.rootElement.findElements(By.xpath("./td"));
-
-
         /*
         for (int index = 0; index < firstCellElements.size(); index++) {
             this.firstRowCellElements.add(new CellElement(this.columns.get(index), firstCellElements.get(0)));
@@ -73,8 +71,6 @@ public class DoubleRowElement extends BaseElement {
 
         return c;
     }
-
-
 
     /*public CellElement getCellByColumnFromSecondRow(String column) {
         for(CellElement cellElement : this.secondRowCellElements) {

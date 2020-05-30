@@ -12,6 +12,8 @@ import pages.SelectFlightPage;
 import sections.FlightDetailsSection;
 import sections.LeftMenuSection;
 
+import java.util.logging.Logger;
+
 public class SelectFlightTest extends BaseTest {
 
     HomePage homePage = new HomePage(driver);
@@ -32,6 +34,7 @@ public class SelectFlightTest extends BaseTest {
         //Open page
         open(driver);
         //Call method register/login
+        Logger.getLogger("User Register");
         registerPage.registeringProvidingFullData();
         singInPage.validateLoginFunctionality();
         //Call method to select a flight (Flight Finder page)
@@ -46,9 +49,9 @@ public class SelectFlightTest extends BaseTest {
 
         //Verify actual page is "Select a Flight page"
         Assert.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
-        //Select a depart flight by Date
+        //Select a depart flight by Time
         selectAFlight.selectAFlightByTime("DEPART", "7:10");
-        //Verify other options are not selected
+        //Verify other options on Depart section are not selected
 
     }
 
@@ -57,10 +60,10 @@ public class SelectFlightTest extends BaseTest {
     public void validateOnlyOneOptionIsAllowedToSelectOnAirlineDropdown() {
 
         //Verify actual page is "Select a Flight page"
-        Assert.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
-        //Select a depart flight by Date
-        selectAFlight.selectAFlightByTime("DEPART", "7:10");
-        //Verify other options on Depart sections are not selected
+        softAssertion.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
+        //Select a depart flight by Price
+        selectAFlight.selectAFlightByPrice("RETURN", "274");
+        //Verify other options on Return sections are not selected
 
     }
 
@@ -69,7 +72,7 @@ public class SelectFlightTest extends BaseTest {
     public void validatePreferencesDefaultOptions() {
 
         //Verify actual page is "Select a Flight page"
-        Assert.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
+        softAssertion.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
 
         //Verify first option is selected by default
         softAssertion.assertTrue(flightDetailsSection.getTripType().isEnabled(),"'Type' button is not available");
@@ -80,16 +83,15 @@ public class SelectFlightTest extends BaseTest {
     public void validateSelectContinueButton() {
 
         //Verify actual page is "Select a Flight page"
-        Assert.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
-        //Select a depart flight by Date
-        selectAFlight.selectAFlightByTime("DEPART", "7:10");
-        //Select a return flight by Time
-        selectAFlight.selectAFlightByTime("RETURN", "16:37");
+        softAssertion.assertEquals(driver.getCurrentUrl(), "http://newtours.demoaut.com/mercuryreservation2.php");
+        //Select a depart flight by Airline
+        selectAFlight.selectAFlightByAirline("DEPART", "Unified Airlines 363");
+        //Select a return flight by Airline
+        selectAFlight.selectAFlightByAirline("RETURN", "Unified Airlines 633");
         //Verify continue button is displayed
-        //Assert.assertEquals(validateSelectContinueButton());
+        softAssertion.assertTrue(selectAFlight.continueButtonIsAvailableAndEnable(driver));
         //Click on continue button
-
+        selectAFlight.clickOnContinue(driver);
         //Verify page is displayed
-
     }
 }
