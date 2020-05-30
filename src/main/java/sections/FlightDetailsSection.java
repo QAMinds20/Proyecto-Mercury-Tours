@@ -1,150 +1,158 @@
 package sections;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import java.util.List;
 
 public class FlightDetailsSection extends BaseSection{
 
-    private WebElement tripType;
+    private List<WebElement> tripType;
 
-    private WebElement passengersCount;
+    private Select passengersCount;
 
-    private WebElement departingFrom;
+    private Select departingFrom;
 
-    private WebElement monthOn;
+    private Select monthOn;
 
-    private WebElement dayOn;
+    private Select dayOn;
 
-    private WebElement arrivingIn;
+    private Select arrivingIn;
 
-    private WebElement monthReturn;
+    private Select monthReturn;
 
-    private WebElement dayReturn;
+    private Select dayReturn;
 
     public FlightDetailsSection(WebDriver driver){
         super(driver);
-    }
-
-    public void clickOnType(){
-
-    }
-
-    public void selectPassenger(){
-
-    }
-
-    public void selectDepartureFrom(){
+        tripType=driver.findElements(By.cssSelector("input[name='tripType']"));
+        passengersCount= (Select) driver.findElement(By.cssSelector("select[name='passCount']"));
+        departingFrom= (Select) driver.findElement(By.cssSelector("select[name='fromPort']"));
+        monthOn= (Select) driver.findElement(By.cssSelector("select[name='fromMonth']"));
+        dayOn= (Select) driver.findElement(By.cssSelector("select[name='fromDay']"));
+        arrivingIn= (Select) driver.findElement(By.cssSelector("select[name='toPort']"));
+        monthReturn= (Select) driver.findElement(By.cssSelector("select[name='toMonth']"));
+        dayReturn= (Select) driver.findElement(By.cssSelector("select[name='toDay']"));
 
     }
 
-    public void selectMonthOn(){
-
+    public void clickOnType(int index){
+        this.tripType.get(index).click();
     }
 
-    public void selectDayOn(){
-
+    public void selectPassenger(int index){
+        this.passengersCount.selectByIndex(index);
     }
 
-    public void selectArriving(){
-
+    public void selectDepartureFrom(String departure){
+        this.departingFrom.selectByVisibleText(departure);
     }
 
-    public void selectMonthReturn(){
-
+    public void selectDepartureFrom(int index){
+        this.departingFrom.selectByIndex(index);
     }
 
-    public void selectDayReturn(){
-
+    public void selectMonthOn(int index){
+        this.monthOn.selectByIndex(index);
     }
 
-    public WebElement getTripType() {
+    public void selectDayOn(
+            int index){this.dayOn.selectByIndex(index);
+    }
+
+    public void selectArriving(int index){
+        this.arrivingIn.selectByIndex(index);
+    }
+
+    public void selectArriving(String arrivingIn){
+        this.arrivingIn.selectByVisibleText(arrivingIn);
+    }
+
+    public void selectMonthReturn(int index){
+        this.monthReturn.selectByIndex(index);
+    }
+
+    public void selectDayReturn(int index){
+        this.dayReturn.selectByIndex(index);
+    }
+
+    public List<WebElement> getTripType() {
         return tripType;
+
     }
 
-    public WebElement getPassengersCount() {
+    public Select getPassengersCount() {
         return passengersCount;
+
     }
 
-    public WebElement getDepartingFrom() {
+    public Select getDepartingFrom() {
         return departingFrom;
+
     }
 
-    public WebElement getMonthOn() {
+    public Select getMonthOn() {
         return monthOn;
+
     }
 
-    public WebElement getDayOn() {
+    public Select getDayOn() {
         return dayOn;
+
     }
 
-    public WebElement getArrivingIn() {
+    public Select getArrivingIn() {
         return arrivingIn;
+
     }
 
-    public WebElement getMonthReturn() {
+    public Select getMonthReturn() {
         return monthReturn;
+
     }
 
-    public WebElement getDayReturn() {
+    public Select getDayReturn() {
         return dayReturn;
+
     }
 
     public String getFirstPassengerSelectedOption () {
-
-        Select selectDropdown = new Select(this.passengersCount);
-
-        return selectDropdown.getFirstSelectedOption().getText();
+        return this.passengersCount.getFirstSelectedOption().getText();
     }
 
     public String getLastPassengerSelectedOption () {
-
-
-        Select selectDropdown = new Select(this.passengersCount);
-
-        return selectDropdown.getOptions().get(3).getText();
+        return this.passengersCount.getOptions().get(3).getText();
     }
 
     public String getdepartingFromSelectedOption () {
 
-        Select selectDropdown = new Select(this.departingFrom);
-
-        return selectDropdown.getFirstSelectedOption().getText();
+        return this.departingFrom.getFirstSelectedOption().getText();
     }
 
     public String getmonthOnSelectedOption () {
 
-        Select selectDropdown = new Select(this.monthOn);
-
-        return selectDropdown.getOptions().get(5).getText();
+        return this.monthOn.getOptions().get(5).getText();
     }
 
     public String getdayOnSelectedOption () {
 
-        Select selectDropdown = new Select(this.dayOn);
-
-        return selectDropdown.getOptions().get(30).getText();
+        return this.dayOn.getOptions().get(30).getText();
     }
 
     public String getarrivingInSelectedOption () {
 
-        Select selectDropdown = new Select(this.arrivingIn);
-
-        return selectDropdown.getOptions().get(1).getText();
+        return this.arrivingIn.getOptions().get(1).getText();
     }
 
     public String getmonthReturnSelectedOption () {
 
-        Select selectDropdown = new Select(this.monthReturn);
-
-        return selectDropdown.getOptions().get(5).getText();
+        return this.monthReturn.getOptions().get(5).getText();
     }
 
     public String getdayReturnSelectedOption () {
 
-        Select selectDropdown = new Select(this.dayReturn);
-
-        return selectDropdown.getOptions().get(30).getText();
+        return this.dayReturn.getOptions().get(30).getText();
     }
 
 }
