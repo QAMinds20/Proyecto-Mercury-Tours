@@ -96,7 +96,6 @@ public class SpecialsSection extends BaseTest {
 
         softAssertion.assertEquals(signOn.getWelcomeMessage(), soWelcomeMessage);
 
-        
     }
 
 
