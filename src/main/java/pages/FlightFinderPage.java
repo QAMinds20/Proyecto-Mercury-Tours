@@ -28,12 +28,11 @@ public class FlightFinderPage extends BasePage {
     }
 
     public FlightDetailsSection getFlightDetailsSection() {
-
         return flightDetailsSection;
     }
 
     private void clickOnContinue(){
-        
+        this.onContinue.click();
     }
 
 }

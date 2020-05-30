@@ -1,23 +1,36 @@
 package sections;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import java.util.List;
 
 
 public class PreferencesSection extends BaseSection{
 
-    protected WebElement serviceClass;
+    protected List<WebElement> serviceClass;
     protected Select airline;
-
+// Constructor de PreferencesSection
     public PreferencesSection(WebDriver driver) {
         super(driver);
+        serviceClass=driver.findElements(By.cssSelector("input[name=servClass]"));
+        airline= (Select) driver.findElements(By.xpath("select[name='airline']"));
     }
-    protected WebElement clickOnClass(){
+    public List<WebElement> clickOnClass(){
+        return this.serviceClass;
+    }
 
-    return this.serviceClass;
+    public  void selectAirline(int index){
+        this.airline.selectByIndex(index);
     }
-    protected  Select selectAirline(){
-    return this.airline;
+
+    public  void selectAirline(String airline){
+        this.airline.selectByVisibleText(airline);
     }
+
+    public  Select getAirline(){
+        return (Select) this.airline;
+    }
+
 }
