@@ -32,7 +32,6 @@ public abstract class BasePage {
 			bookAFlightPage = new BookAFlightPage(driver);
 			flightFinderPage = new FlightFinderPage(driver);
 			selectFlightPage = new SelectFlightPage(driver);
-
         }
     }
 

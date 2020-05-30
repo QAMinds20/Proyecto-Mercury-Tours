@@ -9,53 +9,45 @@ import sections.SpecialSection;
 
 public class HomePage extends BasePage {
 
-    //Information already added before my latest changes
-    @FindBy(how = How.XPATH, using = "(//font[contains(@face, 'Arial') and (@size=2)]")
-    private WebElement flightMessage;
-
-    //Information already added before my latest changes
-    public String getFlightMessage() {
-        return flightMessage.getText();
-    }
+    private static final String MERCURY_TOURS_MAIN_PAGE = "http://newtours.demoaut.com/";
 
     public HomePage(WebDriver driver) {
-
         super(driver, driver.getCurrentUrl());
     }
 
-    public void viewSpecialsDestinations(SpecialSection) {
-
+    public static void open(WebDriver driver) {
+        driver.get(MERCURY_TOURS_MAIN_PAGE);
     }
 
-    public void viewSpecialsPrices(SpecialSection) {
+    WebElement viewSpecialsDestinations;
 
-    }
+        // This methods are already implemented in Special Section class
+//    public void viewSpecialsDestinations(specialSection) {
+//
+//    }
+//
+//    public void viewSpecialsPrices(SpecialSection) {
+//
+//    }
+//
+//    public void countSpecialDestinationItems(SpecialSection) {
+//
+//    }
 
-    public void countSpecialDestinationItems(SpecialSection) {
+        WebElement viewSpecialsPrices;
 
-    }
 
-    public void goToFlights() {
+        WebElement countSpecialDestinationItems;
 
-    }
+        WebElement goToFlights;
 
-    public void goToCruises() {
+        WebElement goToCruises;
 
-    }
+        WebElement goToSignOn;
 
-    public void goToSignOn() {
+        WebElement goToRegister;
 
-    }
+        WebElement goToSupport;
 
-    public void goToRegister() {
-
-    }
-
-    public void goToSupport() {
-
-    }
-
-    public void goToContact() {
-
-    }
+        WebElement goToContact;
 }

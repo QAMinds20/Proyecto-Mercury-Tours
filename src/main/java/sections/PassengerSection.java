@@ -13,7 +13,7 @@ public class PassengerSection extends BaseSection{
         super(driver);
     }
 
-    public void setName() {
+    public void setName(String name) {
 
     }
 
