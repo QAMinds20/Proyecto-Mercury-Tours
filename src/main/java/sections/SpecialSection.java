@@ -5,11 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+
 import java.util.List;
 
 public class SpecialSection extends BaseSection{
 
 
+    private List<WebElement> topDestinations;
     @FindBy(how = How.XPATH, using = "//p/following-sibling::table/tbody/tr//tbody//td[1]")
     private List<WebElement> specialFlightsList;
 
@@ -17,9 +19,21 @@ public class SpecialSection extends BaseSection{
     private List<WebElement> specialPriceList;
 
 
+
     public SpecialSection(WebDriver driver) {
         super(driver);
     }
+
+
+    public boolean isLoaded() {
+        return true;
+    }
+
+    public void checkDestinations() {
+
+
+    }
+
 
     public int getSpecialFlightListCount(){
         System.out.println(specialFlightsList.size());
@@ -43,5 +57,6 @@ public class SpecialSection extends BaseSection{
         }
         return specialPrices;
     }
+
 
 }

@@ -29,7 +29,9 @@ public class TopMenuSection extends BaseSection{
         }
     }
 
-    public void clickOnSignOn() {
+
+    public void clickOnSignon() {
+
         singOnLink.findElement(By.xpath("//a[text()='SIGN-ON']"));
         singOnLink.click();
     }
@@ -50,7 +52,9 @@ public class TopMenuSection extends BaseSection{
     }
 
     public void clickOnContact() {
+
         contactLink.findElement(By.xpath("//a[text()='CONTACT']"));
+
         contactLink.click();
     }
 }
