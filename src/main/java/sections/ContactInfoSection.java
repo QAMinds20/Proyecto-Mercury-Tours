@@ -77,4 +77,3 @@ public class ContactInfoSection extends BaseSection {
         return this.contactInfoHeader.getText();
     }
 }
-

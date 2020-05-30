@@ -1,13 +1,6 @@
 package sections;
 
 import org.openqa.selenium.WebDriver;
-<<<<<<< HEAD
-
-public class SpecialSection {
-    public SpecialSection(WebDriver driver){
-
-    }
-=======
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -51,7 +44,4 @@ public class SpecialSection extends BaseSection{
         return specialPrices;
     }
 
-
-
->>>>>>> dev
 }

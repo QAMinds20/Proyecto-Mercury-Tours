@@ -11,5 +11,5 @@ public abstract class BaseSection {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    
+
 }

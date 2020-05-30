@@ -3,6 +3,8 @@ package sections;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
@@ -10,7 +12,10 @@ import java.util.List;
 public class PreferencesSection extends BaseSection{
 
     protected List<WebElement> serviceClass;
-    protected Select airline;
+    @FindBy(how = How.XPATH, using = "(//font[contains(@face, 'Arial') and (@size=2)]])")
+    private WebElement getFlightMessage;
+     protected Select airline;
+
 // Constructor de PreferencesSection
     public PreferencesSection(WebDriver driver) {
         super(driver);
@@ -31,6 +36,11 @@ public class PreferencesSection extends BaseSection{
 
     public  Select getAirline(){
         return (Select) this.airline;
+    }
+
+
+    public String getFlightMessageMethod() {
+        return getFlightMessage.getText();
     }
 
 }

@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MailingInformationSection extends BaseSection {
 
-
     @FindBy(how = How.XPATH, using = "//form//tbody//tr[6]//td//b//font/font")
     private WebElement mailingInfoHeader;
 
@@ -43,8 +42,7 @@ public class MailingInformationSection extends BaseSection {
     private WebElement postalCodeTxt;
 
     @FindBy(how = How.XPATH, using = "//form//tbody//tr[12]//select")
-    private WebElement conntrySelect;
-
+    private WebElement countrySelect;
 
 
     public MailingInformationSection(WebDriver driver) {
@@ -68,12 +66,12 @@ public class MailingInformationSection extends BaseSection {
     }
 
     public void selectCountryByName(String countryname) {
-        Select select = new Select(conntrySelect);
+        Select select = new Select(countrySelect);
         select.selectByVisibleText(countryname);
     }
 
     public void selectCountryByIndex(int index) {
-        Select select = new Select(conntrySelect);
+        Select select = new Select(countryLbl);
         select.selectByIndex(index);
     }
 
